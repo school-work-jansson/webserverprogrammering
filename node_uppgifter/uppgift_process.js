@@ -1,20 +1,17 @@
+const ask = (i = 0) => {
+    process.stdout.write(`\n\n${questions[i]}`)
+    process.stdout.write(">")
+}
+
 const questions = [
     "Vad är ditt startkapital?",
     "Hur mycket tror du att du kommer att investera varje månad?",
     "Förväntad utveckling per månad? (%)"
 ];
 
-const ask = (i = 0) => {
-    process.stdout.write(`\n\n${questions[i]}`)
-    process.stdout.write(">")
-}
-
 const awnsers = [];
 
-
 ask();
-
-
 
 process.stdin.on('data', data => {
     awnsers.push(parseInt(data));
