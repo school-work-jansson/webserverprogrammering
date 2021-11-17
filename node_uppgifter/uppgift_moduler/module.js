@@ -2,7 +2,7 @@ const readline = require("readline");
 
 const rl = readline.createInterface({
     input: process.stdin,
-    output: process.stout
+    output: process.stdout
 })
 
 module.exports = (questions, done) => {
