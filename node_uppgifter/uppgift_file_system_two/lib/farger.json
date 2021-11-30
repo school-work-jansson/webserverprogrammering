@@ -1,0 +1,19 @@
+{
+	"sample": true,
+	"name": "Färglista",
+	"description": "En lista med massa colla färger",
+	"colorList": [
+		{
+			"färg": "red",
+			"hex": "#ff1111"
+		},
+		{
+			"färg": "grön",
+			"hex": "#11ff27"
+		},
+		{
+			"färg": "blå",
+			"hex": "#1c11ff"
+		}
+	]
+}
