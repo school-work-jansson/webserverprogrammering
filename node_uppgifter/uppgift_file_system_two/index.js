@@ -24,5 +24,10 @@ colorData.colorList.forEach(c => {
     fs.appendFile(file, `${c.färg}: ${c.hex}\n`, err => {
         if (err) throw err;
     })
-
 })
+
+
+fs.rename(file, `${process.cwd()}/test.md`, err => {
+    if (err) throw err
+    fs.unlinkSync(file)
+});
