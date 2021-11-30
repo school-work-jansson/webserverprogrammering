@@ -1,3 +1,4 @@
-- Kolla visa sin balance på sin profil och utveckling (cryptovalutor)
 - Spara profilbilder som base64 i databasen
-- PM
+
+
+- https://leejjon.medium.com/create-a-react-app-served-by-express-js-node-js-and-add-typescript-33705be3ceda
