@@ -25,6 +25,7 @@ body {
 
 header
 {
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     
@@ -45,4 +46,12 @@ header
 
 .navbar > li {
     display: inline;
+}
+
+#content {
+    margin-top: 20vw;
+}
+
+.search > input {
+    width: 100% ;
 }
