@@ -24,10 +24,16 @@ body {
 }
 
 header
-{
+{ 
+    position: fixed;
+
+    
+
     margin-top: 20px;
+    
     display: flex;
     flex-direction: row;
+    z-index: 10;
     
     background-color: #e3e3e3;
 
@@ -37,6 +43,11 @@ header
     width: 90vw;
 
     border-radius: 15px;
+
+    /* Shadow för att göra så att search boxen ser ut att stå ut */
+    box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.75);
 
 }
 
@@ -50,19 +61,69 @@ header
 }
 
 #content {
-    margin-top: 20vw;
+    margin-top: 5vw;
 }
 
-.search > input {
-    height: 50px ;
-    width: 100% ;
+.jumbotron {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: 550px;
+    background-image: url(jumbotron.svg);
+ 
+    background-size:100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+ 
+    background-size:cover;
+}
+
+.search input {
+    height: 55px;
+    width: 100%;
+
+    margin: 0px 10px 0px 10px;
+
+    font-size: 40px;
+    padding: 10px;
+
+    border-radius: 20px;
+    border: none;
     
     /* Shadow för att göra så att search boxen ser ut att stå ut */
-    box-shadow: 0px 0px 20px -10px rgba(0,0,0,0.34);
-    -webkit-box-shadow: 0px 0px 20px -10px rgba(0,0,0,0.34);
-    -moz-box-shadow: 0px 0px 20px -10px rgba(0,0,0,0.34);
+    box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.6);
 }
 
-.search > input:focus {
+.search input:focus {
     outline: none;
+
+    /* Shadow för att göra så att search boxen ser ut att stå ut */
+    box-shadow: 0px 0px 40px -10px rgba(255, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 0px 40px -10px rgba(255, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 40px -10px rgba(255, 0, 0, 0.5);
+
+    transition: 0.2s ease-in;
+}
+
+.card {
+    height: 100px;
+    width: 100%;
+    max-width: 35vw;
+
+    
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 10px;
+
+    border-radius: 15px;
+
+    /* Shadow för att göra så att search boxen ser ut att stå ut */
+    box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.6);
 }
