@@ -23,26 +23,26 @@ body {
     align-items: center;
 }
 
-header
-{ 
+header { 
     position: fixed;
+    z-index: 10;
 
+    margin-top: 25px;
     
-
-    margin-top: 20px;
+    padding: 0 40px 0 40px;
     
     display: flex;
     flex-direction: row;
-    z-index: 10;
-    
-    background-color: #e3e3e3;
 
-    align-content: space-evenly;
+    align-items: center;
+    justify-content: space-between;
     
-    height: 3vw;
+    height: 60px;
     width: 90vw;
 
     border-radius: 15px;
+
+    background-color: #e3e3e3;
 
     /* Shadow för att göra så att search boxen ser ut att stå ut */
     box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.75);
@@ -53,11 +53,20 @@ header
 
 .navbar {
     list-style: none;
+    
     padding: 15px;
+    width: 100%;
 }
 
 .navbar > li {
     display: inline;
+    padding: 10px;
+}
+
+.navbar a, a:visited {
+    text-decoration: none;
+    color: blueviolet;
+    font-size: 20px;
 }
 
 #content {
