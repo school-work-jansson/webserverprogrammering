@@ -8,30 +8,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Fixed position så att menybaren kommer följa med -->
     <header>
-        <div id="logo">
-            <h1 style="color:red;">FOOD</h1>
+        <div class="menu">
+            <div id="logo">
+                <h1 style="color:red;">LOGO</h1>
+            </div>
+            <div id="navbar">
+                <ul class="navbar">
+                    <li>
+                        <a href="about.html">Om det här</a>
+                    </li>
+                    <li>
+                        <a href="#">Kontakta</a>
+                    </li>
+                    <li>
+                        <a href="#">test link</a>
+                    </li>
+                    <li>
+                        <a href="#">test link</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="profile-options">
+                PROFIL
+            </div>
         </div>
-        <div id="navbar">
-            <ul class="navbar">
-                <li>
-                    <a href="about.html">Om det här</a>
-                </li>
-                <li>
-                    <a href="#">Kontakta</a>
-                </li>
-                <li>
-                    <a href="#">test link</a>
-                </li>
-                <li>
-                    <a href="#">test link</a>
-                </li>
-            </ul>
-        </div>
-        <div id="profile-options">
-            PROFIL
-        </div>
-            
     </header>
 
     <section class="jumbotron">
@@ -46,6 +48,7 @@
                 <input id="search-bar" type="text" placeholder="Search...">
             </form>
         </div>
+        <!-- När användaren söker så ska bara x antal visas och så ska man ha möjligheten att klicka på en mer knapp för att ladda in fler -->
         <div class="card">
             <p>Här kommer listan med produkter komma när du söker i form av "cards"</p>
         </div>    
@@ -53,9 +56,30 @@
         <div class="card">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus esse perspiciatis iusto voluptatum sit et sint est quidem, ratione atque beatae quaerat! At, eos in voluptatum illum quas soluta optio.</p>
         </div> 
+        
+        <div class="card">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus esse perspiciatis iusto voluptatum sit et sint est quidem, ratione atque beatae quaerat! At, eos in voluptatum illum quas soluta optio.</p>
+        </div> 
+
+        <div class="card">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus esse perspiciatis iusto voluptatum sit et sint est quidem, ratione atque beatae quaerat! At, eos in voluptatum illum quas soluta optio.</p>
+        </div> 
+
+        <div class="card">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus esse perspiciatis iusto voluptatum sit et sint est quidem, ratione atque beatae quaerat! At, eos in voluptatum illum quas soluta optio.</p>
+        </div> 
+
+        
     </section>
     
     <section id="footer">
+        <div class="footer">
+            <p id="copyright">Copyright &copy; Linus J</p>
+        </div>
+        <script>
+            // Testade innerText vilket skrev ut &copy; innerHTML var lösningen
+            document.getElementById("copyright").innerHTML = `| Copyright ${new Date().getFullYear()} &copy; Linus J | `
+        </script>
         
     </section>
     

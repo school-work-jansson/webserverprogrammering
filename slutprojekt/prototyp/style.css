@@ -1,44 +1,38 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap');
 
+
 * {
     
     margin: 0;
     box-sizing: border-box;
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
-    
 
 }
 
 h1, h2, h3, h4 {
     font-family: 'Bakbak One', cursive;
 }
+
 p, a {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 header { 
     position: fixed;
     z-index: 10;
+    display: block;
 
     margin-top: 25px;
-    
+    margin-left: auto;
+    margin-right: auto;
+
     padding: 0 40px 0 40px;
     
-    display: flex;
-    flex-direction: row;
-
-    align-items: center;
-    justify-content: space-between;
-    
-    height: 60px;
+    /* Något sketchy sätt att få menybaren i mitten?? */
     width: 90vw;
+    left: 5vw;
 
     border-radius: 15px;
 
@@ -49,6 +43,19 @@ header {
     -webkit-box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.75);
 
+}
+header .menu {
+    /* 
+        Måste sätta height här eftersom att det är en egen container 
+        Om jag skulle sätta height i header så skulle den inte placera i mitten
+    */
+    height: 70px;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navbar {
@@ -66,12 +73,9 @@ header {
 .navbar a, a:visited {
     text-decoration: none;
     color: blueviolet;
-    font-size: 20px;
+    font-size: 15px;
 }
 
-#content {
-    margin-top: 5vw;
-}
 
 .jumbotron {
     display: flex;
@@ -83,12 +87,20 @@ header {
     height: 550px;
     background-image: url(jumbotron.svg);
  
-    background-size:100% 100%;
+    background-size: 100% 100%;
     -o-background-size: 100% 100%;
     -webkit-background-size: 100% 100%;
  
     background-size:cover;
 }
+
+#content {
+    margin-top: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 .search input {
     height: 55px;
@@ -124,9 +136,8 @@ header {
     width: 100%;
     max-width: 35vw;
 
-    
     margin-top: 50px;
-    margin-bottom: 50px;
+    /* margin-bottom: 25px; */
     padding: 10px;
 
     border-radius: 15px;
@@ -135,4 +146,23 @@ header {
     box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.6);
     -webkit-box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.6);
     -moz-box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.6);
+}
+
+section#footer {
+    margin-top: 5vw;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 100px;
+
+    width: 100%;
+    bottom: 0;
+    
+    background-color: #e3e3e3;
 }
