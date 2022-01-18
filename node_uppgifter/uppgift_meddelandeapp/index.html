@@ -31,30 +31,29 @@
         </div>
     </div>
 		<script>
-			$(() => {
-				console.log("Loaded")
+        $(() => {
+            console.log("Loaded")
 				
-        $("#send").click( () => {
-            let message = {
-                name: $("#name").val(),
-                message: $("#message").val()
-            }
-					console.log(message)
-					addMessage(message)
-				})
+            $("#send").click( () => {
+                let message = {
+                    name: $("#name").val(),
+                    message: $("#message").val()
+                }
+                console.log(message)
+                addMessage(message)
+            })
+        })
 
-			})
-
-			function addMessage(message) {
-          let date = new Date()
-          $("#messages").append(`
-              <div>
+        function addMessage(message) {
+            let date = new Date()
+            $("#messages").append(`
+                <div>
                 <h4> ${message.name}</h4> 
                 <p> ${message.message}</p> 
                 <span>${date.toISOString()}</span>
-              </div>
-              `)
-			}
+                </div>
+            `)
+        }
 		</script>
 
 </body>
