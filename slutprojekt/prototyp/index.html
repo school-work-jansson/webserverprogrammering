@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slutprojekt | webutveckling 2 & webserverprogrammering</title>
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Fixed position så att menybaren kommer följa med -->
@@ -31,7 +33,8 @@
                 </ul>
             </div>
             <div id="profile-options">
-                PROFIL
+                <p>Login | Logout|</p>
+                <img src="https://media1.tenor.com/images/8007930423bc8dcdcd61da470a182286/tenor.gif" class="pfp" alt="pfp">
             </div>
         </div>
     </header>
@@ -68,8 +71,6 @@
         <div class="card">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus esse perspiciatis iusto voluptatum sit et sint est quidem, ratione atque beatae quaerat! At, eos in voluptatum illum quas soluta optio.</p>
         </div> 
-
-        
     </section>
     
     <section id="footer">
@@ -77,8 +78,10 @@
             <p id="copyright">Copyright &copy; Linus J</p>
         </div>
         <script>
-            // Testade innerText vilket skrev ut &copy; innerHTML var lösningen
-            document.getElementById("copyright").innerHTML = `| Copyright ${new Date().getFullYear()} &copy; Linus J | `
+            $(() => {
+                // Bytte ut till jquery
+                $("#copyright").html(`| Copyright 2022 - ${new Date().getFullYear()} &copy; Linus J | `);
+            });
         </script>
         
     </section>
