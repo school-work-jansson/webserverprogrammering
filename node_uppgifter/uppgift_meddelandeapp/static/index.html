@@ -33,7 +33,9 @@
 		<script>
         $(() => {
             console.log("Loaded")
-				
+			
+            getMessages()
+
             $("#send").click( () => {
                 let message = {
                     name: $("#name").val(),
@@ -41,6 +43,8 @@
                 }
                 console.log(message)
                 addMessage(message)
+                postMessage(message)        
+                
             })
         })
 
@@ -53,6 +57,20 @@
                 <span>${date.toISOString()}</span>
                 </div>
             `)
+        }
+        
+        function postMessage(message) {
+            $.post("http://localhost:8080/send_message", (message))
+        }
+
+        function getMessages() {
+            $.get("http://localhost:8080/meddelanden", (data) => {
+                console.log(data)
+
+                data.forEach(message => {
+                    addMessage(message)
+                });
+            })
         }
 		</script>
 
