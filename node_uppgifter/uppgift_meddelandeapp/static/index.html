@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     
-
+    <script src="/socket.io/socket.io.js"></script>
 </head>
 <body>
     <div class="container">
@@ -31,6 +31,9 @@
         </div>
     </div>
 		<script>
+        let socket = io();
+        socket.on("message", addMessage)
+
         $(() => {
             console.log("Loaded")
 			
@@ -42,8 +45,7 @@
                     message: $("#message").val()
                 }
                 console.log(message)
-                addMessage(message)
-                postMessage(message)        
+                send_message(message)        
                 
             })
         })
@@ -59,7 +61,7 @@
             `)
         }
         
-        function postMessage(message) {
+        function send_message(message) {
             $.post("http://localhost:8080/send_message", (message))
         }
 
